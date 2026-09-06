@@ -59,7 +59,7 @@ export async function fetchStats(): Promise<Stats> {
 
 export async function postOrder(payload: {
   order_id: string;
-  aggressor_side: 'BUY' | 'SELL';| 'SELL';
+  side: 'BUY' | 'SELL';
   price: number;
   quantity: number;
 }): Promise<{ order_id: string; accepted: boolean; message: string }> {
@@ -72,5 +72,3 @@ export async function postOrder(payload: {
   if (!r.ok) throw new Error(data?.message ?? `POST /orders ${r.status}`);
   return data;
 }
-
-

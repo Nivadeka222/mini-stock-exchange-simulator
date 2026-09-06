@@ -35,21 +35,22 @@ export default function LiveTrades({ trades }: { trades: Trade[] | null }) {
           <div className="text-gray-500 text-xs italic p-4 text-center">No trades yet.</div>
         ) : (
           trades.map((t) => {
+            const isBuy = t.aggressor_side === 'BUY';
             return (
               <div
                 key={t.trade_id}
                 className="grid grid-cols-4 px-4 py-1.5 text-xs border-b border-gray-700/50 hover:bg-gray-700/30 transition-colors"
               >
                 <span
-                  className={ont-mono tabular-nums font-semibold }
+                  className={`font-mono tabular-nums font-semibold ${isBuy ? 'text-green-400' : 'text-red-400'}`}
                 >
                   {t.price.toFixed(2)}
                 </span>
                 <span className="text-right text-gray-300 tabular-nums">{t.quantity}</span>
                 <span
-                  className={	ext-right text-xs uppercase font-medium }
+                  className={`text-right text-xs uppercase font-medium ${isBuy ? 'text-green-400' : 'text-red-400'}`}
                 >
-                  {t.aggressor_side === 'BUY' ? '? Buy' : '? Sell'}
+                  {isBuy ? '▲ Buy' : '▼ Sell'}
                 </span>
                 <span className="text-right text-gray-500 font-mono">{fmtTime(t.timestamp_ns)}</span>
               </div>
