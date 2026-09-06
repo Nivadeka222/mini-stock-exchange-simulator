@@ -18,7 +18,7 @@ export type Trade = {
   price: number;
   quantity: number;
   timestamp_ns: number;
-  aggressor_side: 'BUY' | 'SELL';|aggressor_side: 'BUY' | 'SELL';|aggressor_side: 'BUY' | 'SELL';
+  aggressor_side: 'BUY' | 'SELL';
 };
 
 export type Stats = {
