@@ -1,7 +1,8 @@
+![CI](https://github.com/Nivadeka222/mini-stock-exchange-simulator/actions/workflows/ci.yml/badge.svg)
 # Mini Stock Exchange Simulator
 
 A low-latency exchange simulator: a **C++ matching engine** (price-time priority order book), a **Go backend** (REST + WebSocket gateway, gRPC client), and a **Next.js dashboard** (live order book, trades, and stats) — three services, each doing one job, talking to each other the way real trading infrastructure does.
-![CI](https://github.com/Nivadeka222/mini-stock-exchange-simulator/actions/workflows/ci.yml/badge.svg)
+
 **Live demo:** [stock-exchange-sim.vercel.app](https://stock-exchange-sim.vercel.app)
 **Backend API:** [mini-stock-exchange-simulator.onrender.com](https://mini-stock-exchange-simulator.onrender.com) ([`/health`](https://mini-stock-exchange-simulator.onrender.com/health))
 
